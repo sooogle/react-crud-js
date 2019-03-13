@@ -41,7 +41,6 @@ export default class EmployeeList extends React.Component {
   }
 
   handleDelete(id) {
-    window.alert("delete: " + id);
     EmployeeService.delete(id);
     this.setState({
       empList: this.state.empList.filter(emp => emp.id !== id)

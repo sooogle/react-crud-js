@@ -91,9 +91,7 @@ export class EmployeeUpdate extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     EmployeeService.update(this.state);
-    if (window.confirm(JSON.stringify(this.state))) {
-      this.props.history.push("/");
-    }
+    this.props.history.push("/");
   }
 }
 
